@@ -1,15 +1,12 @@
-
-
-
 import React from 'react';
 
 const NavBar = () => {
     return (
-        <div>
-            <header> 
-            <h1>This is the NavBar</h1>
-            </header>
-        </div>
+        <nav className='navBar'>
+          <button>What is Pursuit?</button>
+          <button>Create an account</button>
+          <button>Sign In</button>
+        </nav>
     );
 }
 
