@@ -1,9 +1,13 @@
 import React from 'react';
+import Post from './Post';
 
 const Posts = () => {
     return (
-        <div>
-            <h1>This is the Posts</h1>
+        <div className='postHolder'>
+            <h1>Posts</h1>
+            <Post />
+            <Post />
+            <Post />
         </div>
     );
 }
