@@ -5,70 +5,62 @@ body {
   font-family: sans-serif;
   margin: 0;
 }
-
+html,
 body,
 #root {
   height: 100%;
+  width: 100vw;
+  display:grid;
+  grid-template-columns: 34% repeat(2, 33%);
+  grid-template-rows: 50px auto auto;
+  grid-template-areas: "nav nav nav" "user user contact" "posts posts contact";
 }
-
-.container {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  grid-auto-rows: minmax(100px, auto);
-  gap: 10px 50px;
-  gap: 15px;
-}
-
-header {
-  background-color: lightblue;
-  width: 100%;
-  height: 100%;
-  padding: 10px;
-  align-items: right;
-  margin-top:  0;
-}
-
-.user-profile {
-  width: 95%;
-  height: fit-content;
-  margin: 20px;
+.navBar{
+  background-color: rgb(255, 25, 0);
+  grid-area: nav;
   display: flex;
-  gap: 20px;
-  padding-bottom: 40px;
+  justify-content: flex-end;
+  align-items: center;
+}
+.userProfile {
+  grid-area: user;
+  border: 1px solid black;
+  margin: 15px;
+  padding: 3px;
+  display: flex;
   align-items: flex-start;
 }
-
-.user-contact-card {
-  border: 2px solid black;
-  width: 95%;
-height: fit-content;
-margin: 5px;
-display: flex;
-gap: 20px;
-align-items: flex-start;
-}
-
-.post {
-  border: 2px solid black;
+.contactList {
+  grid-area: contact;
+  border: 1px solid;
+  align-items: center;
+  margin: 15px;
+  padding: 3px;
   text-align: center;
-  margin: 20px;
 }
-.post li {
-  list-style-type: none;
-}
-.posts {
+.postHolder {
+  grid-area: posts;
+  border: 1px solid black;
+  align-items: center;
+  margin: 15px;
+  padding: 10px;
   text-align: center;
-  border: 2px solid black;
-  padding: 15px;
-  margin: 20px;
 }
-.contacts {
-  border: 2px solid black;
-  margin: 20px;
-  padding: 30px;
-}
-.buttons {
-  position:sticky;
+
+.navBar button {
+  margin: 5px;
   text-align: right;
+  align-items: end;
+}
+.userProfile > * {
+  text-align: left;
+}
+li {
+  list-style: none;
 }
 
+.singlePost {
+  border: 1px solid black;
+  margin: 15px;
+  text-align: center;
+}
