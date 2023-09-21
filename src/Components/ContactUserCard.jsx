@@ -1,10 +1,11 @@
 import React from 'react';
+import UserProfile from './UserProfile';
 
 const ContactUserCard = () => {
     return (
-        <div>
-            <h1>This is the User Card</h1>
-        </div>
+      <li className='Cards'>
+        <UserProfile />
+        </li>
     );
 }
 
